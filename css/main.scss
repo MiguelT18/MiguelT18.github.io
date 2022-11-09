@@ -19,6 +19,16 @@ $just-gold: #e5b332;
 $light-grey: #cbcdcc;
 $just-white: #f1f1f1;
 
+// Font sizes
+body {
+  font-size: 62.5%;
+}
+
+$size-lg: 3rem;
+$size-xmd: 2rem;
+$size-md: 1.4rem;
+$size-sm: 1.2rem;
+
 // Font weights
 $weight-thin: 100;
 $weight-light: 300;
@@ -35,6 +45,7 @@ $weight-bold: 700;
     color: $just-white;
     text-align: center;
     padding-bottom: 4px;
+    font-size: $size-md;
   }
   .timer-container {
     display: flex;
@@ -65,15 +76,20 @@ $weight-bold: 700;
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100vh;
   padding-top: 120px;
   background-image: url("/assets/images/background-header.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   h1 {
     color: $just-gold;
     text-align: center;
+    font-size: $size-xmd;
   }
   img {
     width: 90%;
@@ -83,11 +99,23 @@ header {
     padding: 15px 0;
   }
   p {
+    padding-top: 20px;
+    max-width: 670px;
     text-align: center;
     color: $just-white;
     font-weight: 300;
-    font-size: 14px;
+    font-size: $size-sm;
     line-height: 140%;
-    margin: 0 24px;
+    margin: 0 22px;
+  }
+}
+
+main {
+  section:first-child {
+    height: 100vh;
+    background-image: url("/assets/images/background-solid.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

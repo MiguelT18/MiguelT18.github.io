@@ -8,6 +8,10 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  font-size: 62.5%;
+}
+
 .timer {
   background-color: #020202;
   padding: 12px 0;
@@ -18,6 +22,7 @@ html {
   color: #f1f1f1;
   text-align: center;
   padding-bottom: 4px;
+  font-size: 1.4rem;
 }
 .timer .timer-container {
   display: flex;
@@ -44,16 +49,21 @@ html {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100vh;
   padding-top: 120px;
   background-image: url("/assets/images/background-header.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 header h1 {
   color: #e5b332;
   text-align: center;
+  font-size: 2rem;
 }
 header img {
   width: 90%;
@@ -63,10 +73,20 @@ header img {
   padding: 15px 0;
 }
 header p {
+  padding-top: 20px;
+  max-width: 670px;
   text-align: center;
   color: #f1f1f1;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 1.2rem;
   line-height: 140%;
-  margin: 0 24px;
+  margin: 0 22px;
+}
+
+main section:first-child {
+  height: 100vh;
+  background-image: url("/assets/images/background-solid.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=main.css.map */
