@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.timer {
+  background-color: #020202;
+  padding: 12px 0;
+  position: fixed;
+  width: 100%;
+}
+.timer h2 {
+  color: #f1f1f1;
+  text-align: center;
+  padding-bottom: 4px;
+}
+.timer .timer-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.timer .simply-section > div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  color: #f1f1f1;
+}
+.timer .simply-seconds-section > div::after {
+  display: none;
+}
+.timer .simply-section .simply-amount {
+  font-weight: 700;
+  font-size: 26px;
+  color: #ff6122;
+}
+.timer .simply-seconds-section .simply-amount::after {
+  display: none;
+}
+
+header {
+  height: 100vh;
+  padding-top: 120px;
+  background-image: url("/assets/images/background-header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header h1 {
+  color: #e5b332;
+  text-align: center;
+}
+header img {
+  width: 90%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+header p {
+  text-align: center;
+  color: #f1f1f1;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 140%;
+  margin: 0 24px;
+}/*# sourceMappingURL=main.css.map */
