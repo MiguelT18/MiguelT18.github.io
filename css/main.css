@@ -460,4 +460,40 @@ main .flickity-page-dots {
 }
 main .flickity-page-dots .dot {
   background-color: #cbcdcc;
+}
+main section:nth-child(2) {
+  height: 100%;
+  background-image: url("/assets/images/background-market.jpg");
+}
+main section:nth-child(2) h1 {
+  font-size: clamp(2rem, 7vw, 2.8rem);
+  font-weight: 700;
+  color: #f1f1f1;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 40px 0 10px;
+}
+main section:nth-child(2) img {
+  display: block;
+  margin: 0 auto;
+}
+main section:nth-child(2) h2 {
+  font-size: clamp(2rem, 7vw, 2.8rem);
+  font-weight: 700;
+  color: #f1f1f1;
+  text-align: center;
+}
+main section:nth-child(2) h3 {
+  text-align: center;
+  font-weight: 400;
+  font-size: clamp(1rem, 5vw, 1.6rem);
+  color: #e5b332;
+}
+main section:nth-child(2) p {
+  font-size: clamp(1rem, 4.2vw, 1.4rem);
+  font-weight: 300;
+  line-height: 140%;
+  color: #cbcdcc;
+  text-align: center;
+  padding: 15px 0 30px;
 }/*# sourceMappingURL=main.css.map */

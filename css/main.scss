@@ -146,6 +146,7 @@ header {
   }
 }
 
+// SECTION #1
 main {
   section:first-child {
     width: 100%;
@@ -459,6 +460,41 @@ main {
     top: 115%;
     .dot {
       background-color: $light-grey;
+    }
+  }
+
+  // SECTION #2
+  section:nth-child(2) {
+    height: 100%;
+    background: {
+      image: url("/assets/images/background-market.jpg");
+    }
+    h1 {
+      @include title($just-white);
+      text: {
+        align: center;
+        transform: uppercase;
+      }
+      padding: 40px 0 10px;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    h2 {
+      @include title($just-white);
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
+      font-weight: $weight-regular;
+      font-size: $size-md;
+      color: $just-gold;
+    }
+    p {
+      @include paragraph($light-grey, $weight-light);
+      text-align: center;
+      padding: 15px 0 30px;
     }
   }
 }
