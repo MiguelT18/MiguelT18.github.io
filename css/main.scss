@@ -149,7 +149,10 @@ header {
 main {
   section:first-child {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     background: {
       image: url("/assets/images/background-solid.jpg");
       size: cover;
@@ -159,17 +162,303 @@ main {
     h1 {
       @include title($just-white);
       text-align: center;
-      padding: 20px 0;
+      padding: 30px 0 10px;
     }
   }
 
   // cards-container
   .card {
     width: 66%;
-    height: 500px;
+    height: auto;
     margin-right: 10px;
     border-radius: 15px;
     background-color: teal;
     border: 1px solid #212121;
+  }
+
+  .card1 {
+    width: 70%;
+    background-color: $dark-blue;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid $just-gold;
+    border-radius: 8px;
+    h2 {
+      font-size: $size-xmd;
+      color: $just-white;
+      padding: 5px 0;
+    }
+    img {
+      width: clamp(60px, 20vw, 120px);
+    }
+    h3 {
+      font-size: $size-md;
+      color: $just-white;
+      padding: 5px 0;
+    }
+    p {
+      @include paragraph($light-grey, $weight-light);
+      padding-bottom: 15px;
+    }
+    button {
+      position: relative;
+      font-size: 17px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.6em 2.5em;
+      margin-bottom: 5px;
+      display: inline-block;
+      border-radius: 6em;
+      transition: all 0.2s;
+      border: none;
+      font-family: inherit;
+      font-weight: $weight-bold;
+      color: $just-black;
+      background-color: $just-white;
+    }
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    button:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    button::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+    button::after {
+      background-color: $just-white;
+    }
+    button:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  .card2 {
+    width: 70%;
+    background-color: $dark-blue;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid $just-gold;
+    border-radius: 8px;
+    h2 {
+      font-size: $size-xmd;
+      color: $just-white;
+      padding: 5px 0;
+    }
+    img {
+      width: clamp(60px, 20vw, 120px);
+    }
+    h3 {
+      font-size: $size-md;
+      color: $just-white;
+      padding: 5px 0;
+    }
+    p {
+      @include paragraph($light-grey, $weight-light);
+      padding-bottom: 15px;
+    }
+    button {
+      position: relative;
+      font-size: 17px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.6em 2.5em;
+      margin-bottom: 5px;
+      display: inline-block;
+      border-radius: 6em;
+      transition: all 0.2s;
+      border: none;
+      font-family: inherit;
+      font-weight: $weight-bold;
+      color: $just-black;
+      background-color: $just-white;
+    }
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    button:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    button::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+    button::after {
+      background-color: $just-white;
+    }
+    button:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  .card3 {
+    width: 70%;
+    background-color: $dark-blue;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid $just-gold;
+    border-radius: 8px;
+    h2 {
+      font-size: $size-xmd;
+      color: $just-white;
+      padding: 5px 0;
+    }
+    img {
+      width: clamp(60px, 20vw, 120px);
+    }
+    h3 {
+      font-size: $size-md;
+      color: $just-white;
+      padding: 5px 0;
+    }
+    p {
+      @include paragraph($light-grey, $weight-light);
+      padding-bottom: 15px;
+    }
+    button {
+      position: relative;
+      font-size: 17px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.6em 2.5em;
+      margin-bottom: 5px;
+      display: inline-block;
+      border-radius: 6em;
+      transition: all 0.2s;
+      border: none;
+      font-family: inherit;
+      font-weight: $weight-bold;
+      color: $just-black;
+      background-color: $just-white;
+    }
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    button:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    button::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+    button::after {
+      background-color: $just-white;
+    }
+    button:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  .card4 {
+    width: 70%;
+    height: 100%;
+    background-color: $dark-blue;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid $just-gold;
+    border-radius: 8px;
+    h2 {
+      font-size: $size-xmd;
+      color: $just-white;
+      padding: 5px 0;
+    }
+    img {
+      width: clamp(60px, 20vw, 120px);
+    }
+    h3 {
+      font-size: $size-md;
+      color: $just-white;
+      padding: 5px 0;
+    }
+    p {
+      @include paragraph($light-grey, $weight-light);
+      padding-bottom: 15px;
+    }
+    button {
+      position: relative;
+      font-size: 17px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.6em 2.5em;
+      margin-bottom: 5px;
+      display: inline-block;
+      border-radius: 6em;
+      transition: all 0.2s;
+      border: none;
+      font-family: inherit;
+      font-weight: $weight-bold;
+      color: $just-black;
+      background-color: $just-white;
+    }
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    button:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    button::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+    button::after {
+      background-color: $just-white;
+    }
+    button:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  .flickity-button {
+    display: none;
+  }
+  .flickity-page-dots {
+    top: 115%;
+    .dot {
+      background-color: $light-grey;
+    }
   }
 }
