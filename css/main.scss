@@ -24,10 +24,10 @@ body {
   font-size: 62.5%;
 }
 
-$size-lg: 3rem;
-$size-xmd: 2rem;
-$size-md: 1.4rem;
-$size-sm: 1.2rem;
+$size-lg: clamp(2rem, 7vw, 2.8rem);
+$size-xmd: clamp(1.6rem, 8vw, 2rem);
+$size-md: clamp(1rem, 5vw, 1.6rem);
+$size-sm: clamp(1rem, 4.2vw, 1.4rem);
 
 // Font weights
 $weight-thin: 100;
@@ -36,86 +36,77 @@ $weight-regular: 400;
 $weight-bold: 700;
 
 // Styling...
+@mixin paragraph() {
+  font-size: $size-sm;
+  line-height: 140%;
+  color: $light-grey;
+}
+
 .timer {
-  background-color: $just-black;
-  padding: 12px 0;
-  position: fixed;
   width: 100%;
+  height: 21vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  position: fixed;
+  z-index: 1;
+  background-color: $just-black;
   h2 {
-    color: $just-white;
+    padding-top: 12px;
     text-align: center;
-    padding-bottom: 4px;
+    text-transform: uppercase;
     font-size: $size-md;
+    color: $just-white;
   }
   .timer-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
-  }
-  .simply-section > div {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    position: relative;
-    color: $just-white;
-  }
-
-  .simply-seconds-section > div::after {
-    display: none;
-  }
-  .simply-section .simply-amount {
-    font: {
-      weight: $weight-bold;
-      size: 26px;
+    gap: 18px;
+    padding-bottom: 12px;
+    .simply-section > div {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      text-align: center;
     }
-    color: #ff6122;
-  }
-  .simply-seconds-section .simply-amount::after {
-    display: none;
+    .simply-amount {
+      font-size: $size-xmd;
+      font-weight: $weight-bold;
+      color: #ff6122;
+    }
+    .simply-word {
+      font-size: $size-sm;
+      font-weight: $weight-light;
+      color: $just-white;
+    }
   }
 }
 
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  padding-top: 120px;
-  background-image: url("/assets/images/background-header.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  width: 100%;
+  padding-top: 21vh;
+  background: {
+    image: url("/assets/images/background-header.jpg");
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+    attachment: fixed;
+  }
   h1 {
-    color: $just-gold;
     text-align: center;
-    font-size: $size-xmd;
+    font-size: $size-lg;
+    color: $just-gold;
+    padding: 14px 0;
   }
   img {
-    width: 90%;
-    max-width: 400px;
     display: block;
+    max-width: 480px;
     margin: 0 auto;
-    padding: 15px 0;
   }
   p {
-    padding-top: 20px;
-    max-width: 670px;
+    @include paragraph();
     text-align: center;
-    color: $just-white;
-    font-weight: 300;
-    font-size: $size-sm;
-    line-height: 140%;
-    margin: 0 22px;
-  }
-}
-
-main {
-  section:first-child {
-    height: 100vh;
-    background-image: url("/assets/images/background-solid.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 15px;
   }
 }
