@@ -15,7 +15,10 @@
       rel="stylesheet"
     />
     <!-- other head stuff -->
-    <link rel="stylesheet" href="/css/libraries/flickity.css" media="screen" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
   </head>
   <body>
     <div class="timer">
@@ -40,7 +43,7 @@
     <main>
       <section>
         <h1>Sígueme en mis Redes Sociales</h1>
-        <div class="cards-container js-flickity">
+        <div class="cards-container" data-flickity='{ "autoplay": true }'>
           <div class="card1 card">
             <h2>Facebook</h2>
             <img
@@ -167,8 +170,8 @@
       <p>Copyright 2017</p>
     </footer>
 
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="/javascript/libraries/simplyCountdown.min.js"></script>
     <script src="/javascript/libraries/countdown.js"></script>
-    <script src="/javascript/libraries/"></script>
   </body>
 </html>
