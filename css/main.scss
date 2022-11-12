@@ -490,11 +490,36 @@ main {
       font-weight: $weight-regular;
       font-size: $size-md;
       color: $just-gold;
+      padding-top: 15px;
+      margin: 0 14px;
     }
     p {
       @include paragraph($light-grey, $weight-light);
       text-align: center;
       padding: 15px 0 30px;
+      margin: 0 14px;
+    }
+  }
+
+  section:nth-child(3) {
+    width: 100%;
+    background: {
+      image: url("/assets/images/background-solid.jpg");
+      repeat: no-repeat;
+      size: cover;
+      position: center;
+    }
+    h1 {
+      @include title($just-white);
+      text-align: center;
+      padding: 30px 0 15px;
+    }
+    .questions-container {
+      margin: 0 auto;
+      width: 80%;
+      padding: 15px;
+      border: 1px solid #e5b332;
+      border-radius: 15px;
     }
   }
 }
