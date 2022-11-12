@@ -27,7 +27,7 @@ body {
 $size-lg: clamp(2rem, 7vw, 2.8rem);
 $size-xmd: clamp(1.6rem, 8vw, 2rem);
 $size-md: clamp(1rem, 5vw, 1.6rem);
-$size-sm: clamp(1rem, 4.2vw, 1.4rem);
+$size-sm: clamp(1.2rem, 4.2vw, 1.4rem);
 
 // Font weights
 $weight-thin: 100;
@@ -121,7 +121,7 @@ $weight-bold: 700;
 header {
   width: 100%;
   height: 100vh;
-  padding-top: 20vh;
+  padding-top: 18vh;
   background: {
     image: url("/assets/images/background-header.jpg");
     position: center;
@@ -136,13 +136,15 @@ header {
   }
   img {
     display: block;
-    max-width: 480px;
+    max-width: 720px;
     margin: 0 auto;
   }
   p {
     @include paragraph($light-grey, $weight-regular);
     text-align: center;
     padding: 15px;
+    max-width: 760px;
+    margin: 0 auto;
   }
 }
 
@@ -168,18 +170,21 @@ main {
   }
 
   // cards-container
+  .cards-container {
+    top: -20px;
+  }
+
   .card {
     width: 66%;
     height: auto;
     margin-right: 10px;
     border-radius: 15px;
-    background-color: teal;
     border: 1px solid #212121;
+    background-color: rgba(17, 20, 25, 0.8);
   }
 
   .card1 {
     width: 70%;
-    background-color: $dark-blue;
     text-align: center;
     padding: 10px;
     border: 1px solid $just-gold;
@@ -248,7 +253,6 @@ main {
 
   .card2 {
     width: 70%;
-    background-color: $dark-blue;
     text-align: center;
     padding: 10px;
     border: 1px solid $just-gold;
@@ -317,7 +321,6 @@ main {
 
   .card3 {
     width: 70%;
-    background-color: $dark-blue;
     text-align: center;
     padding: 10px;
     border: 1px solid $just-gold;
@@ -386,8 +389,7 @@ main {
 
   .card4 {
     width: 70%;
-    height: 100%;
-    background-color: $dark-blue;
+    height: auto;
     text-align: center;
     padding: 10px;
     border: 1px solid $just-gold;
@@ -407,7 +409,7 @@ main {
     }
     p {
       @include paragraph($light-grey, $weight-light);
-      padding-bottom: 15px;
+      padding-bottom: 30px;
     }
     button {
       position: relative;
@@ -457,7 +459,7 @@ main {
     display: none;
   }
   .flickity-page-dots {
-    top: 115%;
+    top: 107%;
     .dot {
       background-color: $light-grey;
     }
@@ -468,6 +470,9 @@ main {
     height: 100%;
     background: {
       image: url("/assets/images/background-market.jpg");
+      position: center;
+      repeat: no-repeat;
+      size: cover;
     }
     h1 {
       @include title($just-white);
@@ -501,8 +506,11 @@ main {
     }
   }
 
+  // SECTION #3
   section:nth-child(3) {
     width: 100%;
+    height: auto;
+    padding-bottom: 30px;
     background: {
       image: url("/assets/images/background-solid.jpg");
       repeat: no-repeat;
@@ -517,9 +525,45 @@ main {
     .questions-container {
       margin: 0 auto;
       width: 80%;
+      max-width: 620px;
+      height: auto;
       padding: 15px;
       border: 1px solid #e5b332;
       border-radius: 15px;
+      details {
+        font: {
+          size: $size-md;
+          weight: $weight-regular;
+        }
+        margin: 12px;
+        color: $just-white;
+        cursor: pointer;
+        summary {
+          font-weight: $weight-regular;
+        }
+        summary::marker {
+          color: $just-gold;
+        }
+        p {
+          color: $light-grey;
+          font-weight: $weight-light;
+          font-size: $size-sm;
+          line-height: 140%;
+          text-align: justify;
+          padding: 0 20px;
+          margin: 8px 0 14px;
+        }
+      }
     }
+  }
+}
+
+footer {
+  background-color: $just-black;
+  p {
+    color: $just-white;
+    text-align: center;
+    font-size: $size-sm;
+    padding: 15px;
   }
 }

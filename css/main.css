@@ -105,7 +105,7 @@ body {
   }
 }
 .timer .timer-container .simply-word {
-  font-size: clamp(1rem, 4.2vw, 1.4rem);
+  font-size: clamp(1.2rem, 4.2vw, 1.4rem);
   font-weight: 300;
   color: #f1f1f1;
 }
@@ -113,7 +113,7 @@ body {
 header {
   width: 100%;
   height: 100vh;
-  padding-top: 20vh;
+  padding-top: 18vh;
   background-image: url("/assets/images/background-header.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -129,16 +129,18 @@ header h1 {
 }
 header img {
   display: block;
-  max-width: 480px;
+  max-width: 720px;
   margin: 0 auto;
 }
 header p {
-  font-size: clamp(1rem, 4.2vw, 1.4rem);
+  font-size: clamp(1.2rem, 4.2vw, 1.4rem);
   font-weight: 400;
   line-height: 140%;
   color: #cbcdcc;
   text-align: center;
   padding: 15px;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 main section:first-child {
@@ -159,17 +161,19 @@ main section:first-child h1 {
   text-align: center;
   padding: 30px 0 10px;
 }
+main .cards-container {
+  top: -20px;
+}
 main .card {
   width: 66%;
   height: auto;
   margin-right: 10px;
   border-radius: 15px;
-  background-color: teal;
   border: 1px solid #212121;
+  background-color: rgba(17, 20, 25, 0.8);
 }
 main .card1 {
   width: 70%;
-  background-color: #111419;
   text-align: center;
   padding: 10px;
   border: 1px solid #e5b332;
@@ -189,7 +193,7 @@ main .card1 h3 {
   padding: 5px 0;
 }
 main .card1 p {
-  font-size: clamp(1rem, 4.2vw, 1.4rem);
+  font-size: clamp(1.2rem, 4.2vw, 1.4rem);
   font-weight: 300;
   line-height: 140%;
   color: #cbcdcc;
@@ -240,7 +244,6 @@ main .card1 button:hover::after {
 }
 main .card2 {
   width: 70%;
-  background-color: #111419;
   text-align: center;
   padding: 10px;
   border: 1px solid #e5b332;
@@ -260,7 +263,7 @@ main .card2 h3 {
   padding: 5px 0;
 }
 main .card2 p {
-  font-size: clamp(1rem, 4.2vw, 1.4rem);
+  font-size: clamp(1.2rem, 4.2vw, 1.4rem);
   font-weight: 300;
   line-height: 140%;
   color: #cbcdcc;
@@ -311,7 +314,6 @@ main .card2 button:hover::after {
 }
 main .card3 {
   width: 70%;
-  background-color: #111419;
   text-align: center;
   padding: 10px;
   border: 1px solid #e5b332;
@@ -331,7 +333,7 @@ main .card3 h3 {
   padding: 5px 0;
 }
 main .card3 p {
-  font-size: clamp(1rem, 4.2vw, 1.4rem);
+  font-size: clamp(1.2rem, 4.2vw, 1.4rem);
   font-weight: 300;
   line-height: 140%;
   color: #cbcdcc;
@@ -382,8 +384,7 @@ main .card3 button:hover::after {
 }
 main .card4 {
   width: 70%;
-  height: 100%;
-  background-color: #111419;
+  height: auto;
   text-align: center;
   padding: 10px;
   border: 1px solid #e5b332;
@@ -403,11 +404,11 @@ main .card4 h3 {
   padding: 5px 0;
 }
 main .card4 p {
-  font-size: clamp(1rem, 4.2vw, 1.4rem);
+  font-size: clamp(1.2rem, 4.2vw, 1.4rem);
   font-weight: 300;
   line-height: 140%;
   color: #cbcdcc;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
 }
 main .card4 button {
   position: relative;
@@ -456,7 +457,7 @@ main .flickity-button {
   display: none;
 }
 main .flickity-page-dots {
-  top: 115%;
+  top: 107%;
 }
 main .flickity-page-dots .dot {
   background-color: #cbcdcc;
@@ -464,6 +465,9 @@ main .flickity-page-dots .dot {
 main section:nth-child(2) {
   height: 100%;
   background-image: url("/assets/images/background-market.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 main section:nth-child(2) h1 {
   font-size: clamp(2rem, 7vw, 2.8rem);
@@ -492,7 +496,7 @@ main section:nth-child(2) h3 {
   margin: 0 14px;
 }
 main section:nth-child(2) p {
-  font-size: clamp(1rem, 4.2vw, 1.4rem);
+  font-size: clamp(1.2rem, 4.2vw, 1.4rem);
   font-weight: 300;
   line-height: 140%;
   color: #cbcdcc;
@@ -502,6 +506,8 @@ main section:nth-child(2) p {
 }
 main section:nth-child(3) {
   width: 100%;
+  height: auto;
+  padding-bottom: 30px;
   background-image: url("/assets/images/background-solid.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -517,7 +523,41 @@ main section:nth-child(3) h1 {
 main section:nth-child(3) .questions-container {
   margin: 0 auto;
   width: 80%;
+  max-width: 620px;
+  height: auto;
   padding: 15px;
   border: 1px solid #e5b332;
   border-radius: 15px;
+}
+main section:nth-child(3) .questions-container details {
+  font-size: clamp(1rem, 5vw, 1.6rem);
+  font-weight: 400;
+  margin: 12px;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+main section:nth-child(3) .questions-container details summary {
+  font-weight: 400;
+}
+main section:nth-child(3) .questions-container details summary::marker {
+  color: #e5b332;
+}
+main section:nth-child(3) .questions-container details p {
+  color: #cbcdcc;
+  font-weight: 300;
+  font-size: clamp(1.2rem, 4.2vw, 1.4rem);
+  line-height: 140%;
+  text-align: justify;
+  padding: 0 20px;
+  margin: 8px 0 14px;
+}
+
+footer {
+  background-color: #020202;
+}
+footer p {
+  color: #f1f1f1;
+  text-align: center;
+  font-size: clamp(1.2rem, 4.2vw, 1.4rem);
+  padding: 15px;
 }/*# sourceMappingURL=main.css.map */
