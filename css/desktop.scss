@@ -213,6 +213,7 @@ main {
 
   .card {
     width: 66%;
+    max-width: 360px;
     height: auto;
     margin-right: 10px;
     border-radius: 15px;
@@ -493,7 +494,7 @@ main {
     }
   }
   .flickity-button {
-    display: none;
+    display: block;
   }
   .flickity-page-dots {
     top: 107%;
@@ -505,20 +506,37 @@ main {
   // SECTION #2
   section:nth-child(2) {
     height: 100%;
+    padding-bottom: 50px;
     background: {
       image: url("/assets/images/background-market.jpg");
       position: center;
       repeat: no-repeat;
       size: cover;
     }
+    h1 {
+      @include title($just-white);
+      text: {
+        align: center;
+        transform: uppercase;
+      }
+      padding: 40px 0 20px;
+    }
+
     .producer-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      background-color: $dark-blue;
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 8px;
       img {
+        width: 420px;
+        height: 100%;
         display: block;
         margin: 0 auto;
       }
       .main-producer-container-text {
-        display: grid;
-        grid-template-columns: repeat(2fr, 1);
+        padding-right: 60px;
         h1 {
           @include title($just-white);
           text: {
@@ -529,21 +547,19 @@ main {
         }
         h2 {
           @include title($just-white);
-          text-align: center;
+          text-align: left;
         }
         h3 {
-          text-align: center;
+          text-align: left;
           font-weight: $weight-regular;
           font-size: $size-md;
           color: $just-gold;
           padding-top: 15px;
-          margin: 0 14px;
         }
         p {
           @include paragraph($light-grey, $weight-light);
-          text-align: center;
+          text-align: left;
           padding: 15px 0 30px;
-          margin: 0 14px;
         }
       }
     }

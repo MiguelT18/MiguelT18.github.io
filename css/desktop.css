@@ -206,6 +206,7 @@ main .cards-container {
 }
 main .card {
   width: 66%;
+  max-width: 360px;
   height: auto;
   margin-right: 10px;
   border-radius: 15px;
@@ -494,7 +495,7 @@ main .card4 button:hover::after {
   opacity: 0;
 }
 main .flickity-button {
-  display: none;
+  display: block;
 }
 main .flickity-page-dots {
   top: 107%;
@@ -504,18 +505,36 @@ main .flickity-page-dots .dot {
 }
 main section:nth-child(2) {
   height: 100%;
+  padding-bottom: 50px;
   background-image: url("/assets/images/background-market.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+main section:nth-child(2) h1 {
+  font-size: clamp(2rem, 7vw, 2.8rem);
+  font-weight: 700;
+  color: #f1f1f1;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 40px 0 20px;
+}
+main section:nth-child(2) .producer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #111419;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 8px;
+}
 main section:nth-child(2) .producer-container img {
+  width: 420px;
+  height: 100%;
   display: block;
   margin: 0 auto;
 }
 main section:nth-child(2) .producer-container .main-producer-container-text {
-  display: grid;
-  grid-template-columns: repeat(2fr, 1);
+  padding-right: 60px;
 }
 main section:nth-child(2) .producer-container .main-producer-container-text h1 {
   font-size: clamp(2rem, 7vw, 2.8rem);
@@ -529,24 +548,22 @@ main section:nth-child(2) .producer-container .main-producer-container-text h2 {
   font-size: clamp(2rem, 7vw, 2.8rem);
   font-weight: 700;
   color: #f1f1f1;
-  text-align: center;
+  text-align: left;
 }
 main section:nth-child(2) .producer-container .main-producer-container-text h3 {
-  text-align: center;
+  text-align: left;
   font-weight: 400;
   font-size: clamp(1rem, 5vw, 1.6rem);
   color: #e5b332;
   padding-top: 15px;
-  margin: 0 14px;
 }
 main section:nth-child(2) .producer-container .main-producer-container-text p {
   font-size: clamp(1.2rem, 4.2vw, 1.4rem);
   font-weight: 300;
   line-height: 140%;
   color: #cbcdcc;
-  text-align: center;
+  text-align: left;
   padding: 15px 0 30px;
-  margin: 0 14px;
 }
 main section:nth-child(3) {
   width: 100%;
