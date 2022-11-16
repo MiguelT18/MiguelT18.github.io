@@ -205,7 +205,7 @@ main .cards-container {
   top: -20px;
 }
 main .card {
-  width: 66%;
+  width: 100%;
   max-width: 360px;
   height: auto;
   margin-right: 10px;
@@ -214,7 +214,7 @@ main .card {
   background-color: rgba(17, 20, 25, 0.8);
 }
 main .card1 {
-  width: 70%;
+  width: 100%;
   text-align: center;
   padding: 10px;
   border: 1px solid #e5b332;
@@ -284,7 +284,7 @@ main .card1 button:hover::after {
   opacity: 0;
 }
 main .card2 {
-  width: 70%;
+  width: 100%;
   text-align: center;
   padding: 10px;
   border: 1px solid #e5b332;
@@ -354,7 +354,7 @@ main .card2 button:hover::after {
   opacity: 0;
 }
 main .card3 {
-  width: 70%;
+  width: 100%;
   text-align: center;
   padding: 10px;
   border: 1px solid #e5b332;
@@ -424,8 +424,8 @@ main .card3 button:hover::after {
   opacity: 0;
 }
 main .card4 {
-  width: 70%;
-  height: auto;
+  width: 100%;
+  height: 99%;
   text-align: center;
   padding: 10px;
   border: 1px solid #e5b332;
@@ -496,6 +496,15 @@ main .card4 button:hover::after {
 }
 main .flickity-button {
   display: block;
+  background-color: #f1f1f1;
+}
+main .flickity-button:hover {
+  background-color: #e5b332;
+}
+main .flickity-prev-next-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
 }
 main .flickity-page-dots {
   top: 107%;
