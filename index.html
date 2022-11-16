@@ -7,6 +7,19 @@
     <title>Weekly Trading | Rodrigo Binarias</title>
     <!-- STYLES -->
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/tablet.css"
+      media="screen and (min-width: 481px)"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/desktop.css"
+      media="screen and (min-width: 1024px)"
+    />
+    <link rel="stylesheet" href="" />
     <!-- FONT FAMILIES -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,7 +56,10 @@
     <main>
       <section>
         <h1>Sígueme en mis Redes Sociales</h1>
-        <div class="cards-container" data-flickity='{ "autoPlay": true }'>
+        <div
+          class="cards-container"
+          data-flickity='{ "autoPlay": 2000, "wrapAround": true, "watchCSS": true }'
+        >
           <div class="card1 card">
             <h2>Facebook</h2>
             <img
