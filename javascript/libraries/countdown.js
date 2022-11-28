@@ -22,7 +22,7 @@ simplyCountdown("#timerDiscount", {
     alert("La oferta finalizó");
     return;
   }, //Callback on countdown end, put your own function here
-  refresh: 1000, // default refresh every 1s
+  refresh: 500, // default refresh every 1s
   sectionClass: "simply-section", //section css class
   amountClass: "simply-amount", // amount css class
   wordClass: "simply-word", // word css class
