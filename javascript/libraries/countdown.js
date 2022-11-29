@@ -1,6 +1,6 @@
-simplyCountdown("#timerDiscount", {
+simplyCountdown("#countdown", {
   year: 2022, // required
-  month: 11, // required
+  month: 12, // required
   day: 21, // required
   hours: 24, // Default is 0 [0-23] integer
   minutes: 60, // Default is 0 [0-59] integer
