@@ -1,8 +1,15 @@
 // Reset browser styles...
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+// Use converted REM size
+
+body {
+  font-size: 62.5%;
 }
 
 // =============
@@ -10,7 +17,88 @@
 // =============
 
 // Color palette
+
 $just-yellow: #e5b332;
 $just-orange: #ff6122;
 $just-white: #f1f1f1;
 $just-black: #020202;
+
+// Font Family
+
+$family-bebasNeue: "Bebas Neue", cursive;
+$family-inter: "Inter", sans-serif;
+$family-sans: sans-serif;
+
+// Font Sizes
+
+// Conversion: 1rem = 10px
+$size-lg: clamp(1.6rem, 6vw, 2.06rem);
+$size-md: clamp(1.08rem, 4vw, 2rem);
+$size-sm: 1.08rem;
+
+// =============
+// Countdown Styles...
+// =============
+
+.countdown-container {
+  background-color: $just-black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  gap: 5px;
+  h1 {
+    color: $just-orange;
+    text-align: center;
+    font-family: $family-bebasNeue;
+    font-size: $size-lg;
+  }
+  .countdown-style {
+    display: flex;
+    color: $just-white;
+    font-family: $family-sans;
+    font-size: $size-md;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+// =============
+// HEADER Styles...
+// =============
+
+header {
+  height: 90vh;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 100px;
+  gap: 60px;
+  background: {
+    image: url("/assets/images/background-header.jpg");
+    cover: center;
+    size: cover;
+    repeat: no-repeat;
+    attachment: fixed;
+  }
+  .video-description {
+    width: 90%;
+    h2 {
+      font-family: $family-sans;
+      font-size: $size-md;
+      color: $just-yellow;
+      padding: 0 0 40px 0;
+    }
+    p {
+      color: $just-white;
+      font-size: $size-sm;
+      font-family: $family-sans;
+      line-height: 260%;
+      letter-spacing: 0.8px;
+    }
+  }
+  img {
+    max-width: 90%;
+  }
+}
