@@ -102,3 +102,197 @@ header {
     max-width: 90%;
   }
 }
+
+// =================
+// MAIN Styles...
+// =================
+
+main {
+  width: 100%;
+
+  // SECTION #1
+  section:first-child {
+    height: 100vh;
+    background-color: $just-black;
+    h3 {
+      color: $just-yellow;
+      font-family: $family-sans;
+      font-size: $size-lg;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 120px 0 80px 0;
+    }
+    // social media cards
+    @mixin socialMediaCardStyle() {
+      width: 60%;
+      text-align: center;
+      font-family: $family-sans;
+      h4 {
+        color: $just-white;
+        font-size: $size-md;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      p {
+        color: $just-white;
+        font-size: $size-sm;
+        line-height: 200%;
+        padding-bottom: 30px;
+      }
+    }
+
+    .social-media-container {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      grid-template-columns: repeat(3, 1fr);
+
+      .btn {
+        font-family: $family-inter;
+        font-size: $size-sm;
+        letter-spacing: 2.3px;
+      }
+      .btn:link,
+      .btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $just-yellow;
+        padding: 14px 34px;
+        border: 1px solid;
+        border-radius: 1000px;
+        display: inline-block;
+        transition: all 0.2s;
+        position: relative;
+      }
+
+      .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(27, 27, 27, 0.5);
+      }
+
+      .btn:active {
+        transform: translateY(-3px);
+      }
+
+      .btn::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+        transition: all 0.3s;
+      }
+
+      .btn:hover::after {
+        background-color: rgb(197, 179, 38);
+        transform: scaleX(1.4) scaleY(1.5);
+        opacity: 0;
+      }
+
+      .instagram-card {
+        @include socialMediaCardStyle();
+        img {
+          width: 80px;
+          padding-bottom: 24px;
+        }
+      }
+
+      .tiktok-card {
+        @include socialMediaCardStyle();
+        img {
+          width: 90px;
+          padding-bottom: 24px;
+        }
+      }
+      .youtube-card {
+        @include socialMediaCardStyle();
+        img {
+          width: 90px;
+          padding-bottom: 24px;
+        }
+      }
+    }
+  }
+
+  // SECTION #2
+  section:nth-child(2) {
+    height: 90vh;
+    background: {
+      image: url("/assets/images/background-section2.jpg");
+      repeat: no-repeat;
+      size: cover;
+      position: center;
+      attachment: fixed;
+    }
+    h3 {
+      color: $just-yellow;
+      font-size: $size-lg;
+      font-family: $family-sans;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 100px 0 80px 0;
+    }
+    .about-producer-container {
+      background-color: $just-black;
+      width: 70%;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 30% 1fr;
+      margin: 0 auto;
+      img {
+        width: 100%;
+      }
+      .about-producer-text {
+        padding: {
+          top: 30px;
+          left: 40px;
+          right: 30px;
+          bottom: 30px;
+        }
+        h4 {
+          color: $just-white;
+          font-size: $size-md;
+          font-family: $family-sans;
+          padding-bottom: 30px;
+        }
+        h5 {
+          color: $just-yellow;
+          font-size: $size-md;
+          font-weight: 300;
+          font-family: $family-sans;
+          padding-bottom: 30px;
+        }
+        p {
+          color: $just-white;
+          font-size: $size-sm;
+          font-weight: 300;
+          font-family: $family-sans;
+          line-height: 200%;
+        }
+      }
+    }
+  }
+}
+
+// =================
+// FOOTER Styles...
+// =================
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $just-black;
+  height: 10vh;
+  h6 {
+    color: $just-white;
+    text-align: center;
+    font-size: $size-sm;
+    font-family: $family-sans;
+    font-weight: 300;
+  }
+}
