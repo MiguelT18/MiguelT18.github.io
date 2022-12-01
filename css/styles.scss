@@ -33,7 +33,7 @@ $family-sans: sans-serif;
 
 // Conversion: 1rem = 10px
 $size-lg: clamp(1.6rem, 6vw, 2.06rem);
-$size-md: clamp(1.08rem, 4vw, 2rem);
+$size-md: clamp(1.4rem, 4vw, 2rem);
 $size-sm: 1.08rem;
 
 // =============
@@ -41,10 +41,11 @@ $size-sm: 1.08rem;
 // =============
 
 .countdown-container {
+  width: 100%;
+  height: fit-content;
   background-color: $just-black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-column: 1 / 4;
   padding: 20px 0;
   gap: 5px;
   h1 {
@@ -54,13 +55,19 @@ $size-sm: 1.08rem;
     font-size: $size-lg;
   }
   .countdown-style {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     color: $just-white;
     font-family: $family-sans;
     font-size: $size-md;
-    font-weight: 300;
     font-style: italic;
-    text-align: center;
+    gap: 20px;
+    .simply-section > div {
+      display: flex;
+      gap: 6px;
+    }
   }
 }
 
@@ -69,12 +76,11 @@ $size-sm: 1.08rem;
 // =============
 
 header {
-  height: 90vh;
+  width: 100%;
+  height: 100vh;
   display: grid;
-  align-items: center;
+  justify-content: center;
   grid-template-columns: repeat(2, 1fr);
-  padding: 0 100px;
-  gap: 60px;
   background: {
     image: url("/assets/images/background-header.jpg");
     cover: center;
@@ -84,6 +90,7 @@ header {
   }
   .video-description {
     width: 90%;
+    padding-left: 100px;
     h2 {
       font-family: $family-sans;
       font-size: $size-md;
@@ -91,6 +98,7 @@ header {
       padding: 0 0 40px 0;
     }
     p {
+      max-width: 80%;
       color: $just-white;
       font-size: $size-sm;
       font-family: $family-sans;
@@ -296,3 +304,76 @@ footer {
     font-weight: 300;
   }
 }
+
+// =================
+// RESPONSIVE DESIGN
+// =================
+
+// Tablet styles
+@media screen and (max-width: 768px) {
+  header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    nav {
+      .countdown-style {
+        text-align: center;
+        .simply-section > div {
+          width: 84px;
+          font-style: normal;
+          flex-direction: column;
+          align-items: center;
+          background-color: $just-white;
+          color: $just-black;
+          padding: 4px;
+          border-radius: 6px;
+          .simply-amount {
+            font-weight: bold;
+            font-size: $size-md;
+            font-family: $family-inter;
+          }
+          .simply-word {
+            font-size: $size-sm;
+            font-family: $family-inter;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+    .video-description {
+      text-align: center;
+      padding: 0;
+      h2 {
+        width: 100%;
+        padding: 50px 0 20px 0;
+      }
+      p {
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 30px;
+      }
+    }
+  }
+  main {
+    section:first-child {
+      height: 100%;
+      padding-bottom: 80px;
+      .social-media-container {
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+        .social-media-card {
+          p {
+            max-width: 80%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile styles
