@@ -63,10 +63,9 @@ $size-sm: 1.08rem;
     font-family: $family-sans;
     font-size: $size-md;
     font-style: italic;
-    gap: 20px;
+    gap: 6px;
     .simply-section > div {
       display: flex;
-      gap: 6px;
     }
   }
 }
@@ -322,14 +321,14 @@ footer {
       .countdown-style {
         text-align: center;
         .simply-section > div {
-          width: 84px;
+          width: clamp(74px, 21vw, 100px);
           font-style: normal;
           flex-direction: column;
           align-items: center;
           background-color: $just-white;
           color: $just-black;
-          padding: 4px;
           border-radius: 6px;
+          padding: 4px 36px;
           .simply-amount {
             font-weight: bold;
             font-size: $size-md;

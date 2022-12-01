@@ -34,11 +34,10 @@ body {
   font-family: sans-serif;
   font-size: clamp(1.4rem, 4vw, 2rem);
   font-style: italic;
-  gap: 20px;
+  gap: 6px;
 }
 .countdown-container .countdown-style .simply-section > div {
   display: flex;
-  gap: 6px;
 }
 
 header {
@@ -282,14 +281,14 @@ footer h6 {
     text-align: center;
   }
   header nav .countdown-style .simply-section > div {
-    width: 84px;
+    width: clamp(74px, 21vw, 100px);
     font-style: normal;
     flex-direction: column;
     align-items: center;
     background-color: #f1f1f1;
     color: #020202;
-    padding: 4px;
     border-radius: 6px;
+    padding: 4px 36px;
   }
   header nav .countdown-style .simply-section > div .simply-amount {
     font-weight: bold;
