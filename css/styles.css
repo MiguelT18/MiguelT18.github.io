@@ -23,7 +23,7 @@ body {
   color: #ff6122;
   text-align: center;
   font-family: "Bebas Neue", cursive;
-  font-size: clamp(1.6rem, 6vw, 2.06rem);
+  font-size: clamp(2rem, 4vw, 2.5rem);
 }
 .countdown-container .countdown-style {
   width: 100%;
@@ -38,56 +38,73 @@ body {
 }
 .countdown-container .countdown-style .simply-section > div {
   display: flex;
+  margin: 0 4px;
+}
+.countdown-container .countdown-style .simply-amount {
+  margin-right: 6px;
+}
+@media screen and (min-width: 768px) {
+  .countdown-container .countdown-style .simply-section:first-child > div::after,
+.countdown-container .countdown-style .simply-section:nth-child(2) > div::after,
+.countdown-container .countdown-style .simply-section:nth-child(3) > div::after {
+    content: ",";
+  }
 }
 
 header {
   width: 100%;
-  height: 100vh;
   display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+  height: 100vh;
   background-image: url("/assets/images/background-header.jpg");
   background-cover: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-header .video-description {
-  width: 90%;
-  padding-left: 100px;
+header .video-container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
 }
-header .video-description h2 {
+header .video-container .video-description {
+  padding-left: 80px;
+}
+header .video-container .video-description h2 {
   font-family: sans-serif;
-  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   color: #e5b332;
-  padding: 0 0 40px 0;
+  padding: 0 0 60px 0;
 }
-header .video-description p {
+header .video-container .video-description p {
   max-width: 80%;
   color: #f1f1f1;
-  font-size: 1.08rem;
+  font-size: clamp(1.08rem, 5vw, 1.25rem);
   font-family: sans-serif;
   line-height: 260%;
   letter-spacing: 0.8px;
 }
-header img {
+header .video-container img {
   max-width: 90%;
+  margin: 0 auto;
 }
 
 main {
   width: 100%;
 }
 main section:first-child {
-  height: 100vh;
+  height: 100%;
+  padding-bottom: 150px;
   background-color: #020202;
 }
 main section:first-child h3 {
   color: #e5b332;
   font-family: sans-serif;
-  font-size: clamp(1.6rem, 6vw, 2.06rem);
+  font-size: clamp(2rem, 4vw, 2.5rem);
   text-transform: uppercase;
   text-align: center;
-  padding: 120px 0 80px 0;
+  padding: 120px 0 100px 0;
 }
 main section:first-child .social-media-container {
   display: grid;
@@ -97,7 +114,7 @@ main section:first-child .social-media-container {
 }
 main section:first-child .social-media-container .btn {
   font-family: "Inter", sans-serif;
-  font-size: 1.08rem;
+  font-size: clamp(1.08rem, 5vw, 1.25rem);
   letter-spacing: 2.3px;
 }
 main section:first-child .social-media-container .btn:link,
@@ -149,7 +166,7 @@ main section:first-child .social-media-container .instagram-card h4 {
 }
 main section:first-child .social-media-container .instagram-card p {
   color: #f1f1f1;
-  font-size: 1.08rem;
+  font-size: clamp(1.08rem, 5vw, 1.25rem);
   line-height: 200%;
   padding-bottom: 30px;
 }
@@ -170,7 +187,7 @@ main section:first-child .social-media-container .tiktok-card h4 {
 }
 main section:first-child .social-media-container .tiktok-card p {
   color: #f1f1f1;
-  font-size: 1.08rem;
+  font-size: clamp(1.08rem, 5vw, 1.25rem);
   line-height: 200%;
   padding-bottom: 30px;
 }
@@ -191,7 +208,7 @@ main section:first-child .social-media-container .youtube-card h4 {
 }
 main section:first-child .social-media-container .youtube-card p {
   color: #f1f1f1;
-  font-size: 1.08rem;
+  font-size: clamp(1.08rem, 5vw, 1.25rem);
   line-height: 200%;
   padding-bottom: 30px;
 }
@@ -200,7 +217,8 @@ main section:first-child .social-media-container .youtube-card img {
   padding-bottom: 24px;
 }
 main section:nth-child(2) {
-  height: 90vh;
+  height: 100%;
+  padding-bottom: 60px;
   background-image: url("/assets/images/background-section2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -209,15 +227,15 @@ main section:nth-child(2) {
 }
 main section:nth-child(2) h3 {
   color: #e5b332;
-  font-size: clamp(1.6rem, 6vw, 2.06rem);
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-family: sans-serif;
   text-align: center;
   text-transform: uppercase;
-  padding: 100px 0 80px 0;
+  padding: 80px 0 80px 0;
 }
 main section:nth-child(2) .about-producer-container {
   background-color: #020202;
-  width: 70%;
+  width: 90%;
   display: grid;
   align-items: center;
   grid-template-columns: 30% 1fr;
@@ -247,7 +265,7 @@ main section:nth-child(2) .about-producer-container .about-producer-text h5 {
 }
 main section:nth-child(2) .about-producer-container .about-producer-text p {
   color: #f1f1f1;
-  font-size: 1.08rem;
+  font-size: clamp(1.08rem, 5vw, 1.25rem);
   font-weight: 300;
   font-family: sans-serif;
   line-height: 200%;
@@ -263,7 +281,7 @@ footer {
 footer h6 {
   color: #f1f1f1;
   text-align: center;
-  font-size: 1.08rem;
+  font-size: clamp(1.08rem, 5vw, 1.25rem);
   font-family: sans-serif;
   font-weight: 300;
 }
@@ -271,10 +289,6 @@ footer h6 {
 @media screen and (max-width: 768px) {
   header {
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     padding-bottom: 80px;
   }
   header nav .countdown-style {
@@ -289,26 +303,34 @@ footer h6 {
     color: #020202;
     border-radius: 6px;
     padding: 4px 36px;
+    margin: 0 !important;
   }
   header nav .countdown-style .simply-section > div .simply-amount {
+    color: #ff6122 !important;
     font-weight: bold;
     font-size: clamp(1.4rem, 4vw, 2rem);
     font-family: "Inter", sans-serif;
+    margin: 0 !important;
   }
   header nav .countdown-style .simply-section > div .simply-word {
-    font-size: 1.08rem;
+    font-size: clamp(1.08rem, 5vw, 1.25rem);
     font-family: "Inter", sans-serif;
     font-weight: 300;
   }
-  header .video-description {
+  header .video-container {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding: 0;
   }
-  header .video-description h2 {
+  header .video-container .video-description {
+    padding: 0;
+  }
+  header .video-container .video-description h2 {
     width: 100%;
     padding: 50px 0 20px 0;
   }
-  header .video-description p {
+  header .video-container .video-description p {
     width: 100%;
     margin: 0 auto;
     padding-bottom: 30px;
@@ -323,7 +345,19 @@ footer h6 {
     gap: 120px;
   }
   main section:first-child .social-media-container .social-media-card p {
-    max-width: 80%;
     margin: 0 auto;
+  }
+  main section:nth-child(2) h3 {
+    padding: 60px 0 40px 0;
+  }
+  main section:nth-child(2) .about-producer-container {
+    display: flex;
+    flex-direction: column;
+  }
+  main section:nth-child(2) .about-producer-container img {
+    width: 60%;
+  }
+  main section:nth-child(2) .about-producer-container .about-producer-text {
+    text-align: center;
   }
 }/*# sourceMappingURL=styles.css.map */
