@@ -33,7 +33,7 @@ $family-sans: sans-serif;
 
 // Conversion: 1rem = 10px
 $size-lg: clamp(2rem, 4vw, 2.5rem);
-$size-md: clamp(1.4rem, 4vw, 2rem);
+$size-md: clamp(1.8rem, 4vw, 2rem);
 $size-sm: clamp(1.08rem, 5vw, 1.25rem);
 
 // =============
@@ -52,7 +52,7 @@ $size-sm: clamp(1.08rem, 5vw, 1.25rem);
     color: $just-orange;
     text-align: center;
     font-family: $family-bebasNeue;
-    font-size: $size-lg;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
   }
   .countdown-style {
     width: 100%;
@@ -355,7 +355,7 @@ footer {
             margin: 0 !important;
           }
           .simply-word {
-            font-size: $size-sm;
+            font-size: clamp(1rem, 4vw, 1.25rem);
             font-family: $family-inter;
             font-weight: 300;
           }

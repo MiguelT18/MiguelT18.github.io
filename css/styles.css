@@ -23,7 +23,7 @@ body {
   color: #ff6122;
   text-align: center;
   font-family: "Bebas Neue", cursive;
-  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
 .countdown-container .countdown-style {
   width: 100%;
@@ -160,7 +160,7 @@ main section:first-child .social-media-container .instagram-card {
 }
 main section:first-child .social-media-container .instagram-card h4 {
   color: #f1f1f1;
-  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-size: clamp(1.8rem, 4vw, 2rem);
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -181,7 +181,7 @@ main section:first-child .social-media-container .tiktok-card {
 }
 main section:first-child .social-media-container .tiktok-card h4 {
   color: #f1f1f1;
-  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-size: clamp(1.8rem, 4vw, 2rem);
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -202,7 +202,7 @@ main section:first-child .social-media-container .youtube-card {
 }
 main section:first-child .social-media-container .youtube-card h4 {
   color: #f1f1f1;
-  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-size: clamp(1.8rem, 4vw, 2rem);
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -252,13 +252,13 @@ main section:nth-child(2) .about-producer-container .about-producer-text {
 }
 main section:nth-child(2) .about-producer-container .about-producer-text h4 {
   color: #f1f1f1;
-  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-size: clamp(1.8rem, 4vw, 2rem);
   font-family: sans-serif;
   padding-bottom: 30px;
 }
 main section:nth-child(2) .about-producer-container .about-producer-text h5 {
   color: #e5b332;
-  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-size: clamp(1.8rem, 4vw, 2rem);
   font-weight: 300;
   font-family: sans-serif;
   padding-bottom: 30px;
@@ -308,12 +308,12 @@ footer h6 {
   header nav .countdown-style .simply-section > div .simply-amount {
     color: #ff6122 !important;
     font-weight: bold;
-    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-size: clamp(1.8rem, 4vw, 2rem);
     font-family: "Inter", sans-serif;
     margin: 0 !important;
   }
   header nav .countdown-style .simply-section > div .simply-word {
-    font-size: clamp(1.08rem, 5vw, 1.25rem);
+    font-size: clamp(1rem, 4vw, 1.25rem);
     font-family: "Inter", sans-serif;
     font-weight: 300;
   }
