@@ -240,6 +240,7 @@ main section:nth-child(2) .about-producer-container {
   align-items: center;
   grid-template-columns: 30% 1fr;
   margin: 0 auto;
+  border-radius: 8px;
 }
 main section:nth-child(2) .about-producer-container img {
   width: 100%;
